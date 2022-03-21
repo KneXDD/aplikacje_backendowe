@@ -3,8 +3,12 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class ReadFile {
-    public static void main(String[] args) {
-
+    public static void main(String[] args)
+    {
+        Read();
+    }
+    public static void Read()
+    {
         FileInputStream connect = null;
 
         try //We check if the file exists
@@ -17,7 +21,7 @@ public class ReadFile {
             System.exit(1);
         }
         ////////////////////////////////////////
-        int letter = 0;
+        int letter = 0; //Character reading
         try
         {
             letter = connect.read();
@@ -32,8 +36,8 @@ public class ReadFile {
             System.out.println("FATAL ERROR!");
             System.exit(2);
         }
-
-        try
+        ////////////////////////////////////////
+        try //Close file
         {
             connect.close();
         }
@@ -43,4 +47,5 @@ public class ReadFile {
         }
     }
 }
+
 
